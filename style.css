@@ -1,0 +1,129 @@
+.navbar {
+  background-color: #3d3d3d;
+  width: 60px;
+  padding: 1rem 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar ul li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.navbar ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.6rem;
+  padding: 0.75rem 0;
+  width: 90%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #0b8457;
+  width: 100%;
+  cursor: pointer;
+}
+
+.product-card {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 10px;
+  width: 122px;
+  height: 147px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-card:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  width: 100px;
+  height: 80px;
+  margin: 0 auto 8px;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card h2 {
+  margin: 8px 0 4px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-card p {
+  font-size: 13px;
+  margin: 0;
+  color: #444;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+.available {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: green;
+  font-weight: bold;
+}
+
+.slider-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 10px;
+  color: #ff6600; /* لون مميز */
+  direction: rtl;
+}
+
+.slider-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  direction: rtl;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
